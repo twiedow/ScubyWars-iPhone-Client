@@ -40,4 +40,8 @@
 }
 
 
++ (NSData*) dataFromString:(NSString*) string {
+  return [string dataUsingEncoding:NSUTF16BigEndianStringEncoding];
+}
+
 @end

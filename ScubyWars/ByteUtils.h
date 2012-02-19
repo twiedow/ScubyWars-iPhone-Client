@@ -16,5 +16,6 @@
 + (NSData*) dataFromInt:(int) value;
 + (NSData*) dataFromShort:(short) value;
 + (NSData*) dataFromByte:(uint8_t) value;
++ (NSData*) dataFromString:(NSString*) string;
 
 @end

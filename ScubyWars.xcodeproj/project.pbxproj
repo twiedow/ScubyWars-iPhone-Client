@@ -230,13 +230,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -252,7 +253,7 @@
 				GCC_PREFIX_HEADER = "ScubyWars/ScubyWars-Prefix.pch";
 				INFOPLIST_FILE = "ScubyWars/ScubyWars-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0EB3CE75-929F-46CC-8EAC-3B542DDF10B5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D3E8BFF9-F10E-4563-93C8-831A38047418";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

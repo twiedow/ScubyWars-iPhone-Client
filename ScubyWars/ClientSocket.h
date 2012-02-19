@@ -37,7 +37,7 @@ typedef NSUInteger PlayerAcceleration;
 @property (retain) NSLock* sendActionLock;
 
 - (long long) playerId;
-- (void) sendPlayerActionWithDirection:(PlayerDirection) playerDirection withAcceleration:(PlayerAcceleration) playerAcceleration fire:(BOOL) fire;
+- (void) sendPlayerActionWithDirection:(PlayerDirection) playerDirection withAcceleration:(PlayerAcceleration) playerAcceleration fire:(BOOL) fireWithNextActionFlag;
 - (void) close;
 
 @end
