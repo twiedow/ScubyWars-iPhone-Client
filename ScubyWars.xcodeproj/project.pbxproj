@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A7088FB14F14FCD00BFB1BE /* ScubyWars.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7088FA14F14FCD00BFB1BE /* ScubyWars.storyboard */; };
 		5A89817713233B10008A63B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A89817613233B10008A63B4 /* UIKit.framework */; };
 		5A89817913233B10008A63B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A89817813233B10008A63B4 /* Foundation.framework */; };
 		5A89817B13233B10008A63B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A89817A13233B10008A63B4 /* CoreGraphics.framework */; };
 		5A89818113233B10008A63B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A89817F13233B10008A63B4 /* InfoPlist.strings */; };
 		5A89818413233B10008A63B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A89818313233B10008A63B4 /* main.m */; };
 		5A89818713233B10008A63B4 /* ScubyWarsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A89818613233B10008A63B4 /* ScubyWarsAppDelegate.m */; };
-		5A89818A13233B10008A63B4 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A89818813233B10008A63B4 /* MainWindow.xib */; };
 		5A89818D13233B10008A63B4 /* ScubyWarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A89818C13233B10008A63B4 /* ScubyWarsViewController.m */; };
-		5A89819013233B10008A63B4 /* ScubyWarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A89818E13233B10008A63B4 /* ScubyWarsViewController.xib */; };
 		5A89819813233BD0008A63B4 /* ClientSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A89819713233BD0008A63B4 /* ClientSocket.m */; };
 		5A89819B13235196008A63B4 /* ByteUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A89819A13235196008A63B4 /* ByteUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A7088FA14F14FCD00BFB1BE /* ScubyWars.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScubyWars.storyboard; sourceTree = "<group>"; };
 		5A89817213233B10008A63B4 /* ScubyWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScubyWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A89817613233B10008A63B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5A89817813233B10008A63B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -31,10 +31,8 @@
 		5A89818313233B10008A63B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5A89818513233B10008A63B4 /* ScubyWarsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScubyWarsAppDelegate.h; sourceTree = "<group>"; };
 		5A89818613233B10008A63B4 /* ScubyWarsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScubyWarsAppDelegate.m; sourceTree = "<group>"; };
-		5A89818913233B10008A63B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		5A89818B13233B10008A63B4 /* ScubyWarsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScubyWarsViewController.h; sourceTree = "<group>"; };
 		5A89818C13233B10008A63B4 /* ScubyWarsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScubyWarsViewController.m; sourceTree = "<group>"; };
-		5A89818F13233B10008A63B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ScubyWarsViewController.xib; sourceTree = "<group>"; };
 		5A89819613233BD0008A63B4 /* ClientSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientSocket.h; sourceTree = "<group>"; };
 		5A89819713233BD0008A63B4 /* ClientSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientSocket.m; sourceTree = "<group>"; };
 		5A89819913235196008A63B4 /* ByteUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByteUtils.h; sourceTree = "<group>"; };
@@ -87,10 +85,9 @@
 			children = (
 				5A89818513233B10008A63B4 /* ScubyWarsAppDelegate.h */,
 				5A89818613233B10008A63B4 /* ScubyWarsAppDelegate.m */,
-				5A89818813233B10008A63B4 /* MainWindow.xib */,
+				5A7088FA14F14FCD00BFB1BE /* ScubyWars.storyboard */,
 				5A89818B13233B10008A63B4 /* ScubyWarsViewController.h */,
 				5A89818C13233B10008A63B4 /* ScubyWarsViewController.m */,
-				5A89818E13233B10008A63B4 /* ScubyWarsViewController.xib */,
 				5A89819613233BD0008A63B4 /* ClientSocket.h */,
 				5A89819713233BD0008A63B4 /* ClientSocket.m */,
 				5A89819913235196008A63B4 /* ByteUtils.h */,
@@ -136,6 +133,9 @@
 /* Begin PBXProject section */
 		5A89816913233B0F008A63B4 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
 			buildConfigurationList = 5A89816C13233B0F008A63B4 /* Build configuration list for PBXProject "ScubyWars" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -159,8 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A89818113233B10008A63B4 /* InfoPlist.strings in Resources */,
-				5A89818A13233B10008A63B4 /* MainWindow.xib in Resources */,
-				5A89819013233B10008A63B4 /* ScubyWarsViewController.xib in Resources */,
+				5A7088FB14F14FCD00BFB1BE /* ScubyWars.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,22 +189,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		5A89818813233B10008A63B4 /* MainWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5A89818913233B10008A63B4 /* en */,
-			);
-			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		5A89818E13233B10008A63B4 /* ScubyWarsViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5A89818F13233B10008A63B4 /* en */,
-			);
-			name = ScubyWarsViewController.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -221,7 +204,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -235,7 +218,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
@@ -246,6 +229,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tobias Wiedow (8Z88CZVTH5)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -262,6 +246,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScubyWars/ScubyWars-Prefix.pch";

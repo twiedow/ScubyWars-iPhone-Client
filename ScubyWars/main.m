@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ScubyWarsAppDelegate.h"
+
 int main(int argc, char *argv[])
 {
-  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-  int retVal = UIApplicationMain(argc, argv, nil, nil);
-  [pool release];
-  return retVal;
+  @autoreleasepool {
+    int retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([ScubyWarsAppDelegate class]));
+    return retVal;
+  }
 }

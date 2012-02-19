@@ -25,18 +25,8 @@ typedef NSUInteger PlayerAcceleration;
 
 
 @interface ClientSocket : NSObject <NSStreamDelegate> {
-  NSInputStream* inputStream;
-  NSOutputStream* outputStream;
-  NSLock* sendActionLock;
-
-  long long playerId;
 }
 
-@property (retain) NSInputStream* inputStream;
-@property (retain) NSOutputStream* outputStream;
-@property (retain) NSLock* sendActionLock;
-
-- (long long) playerId;
 - (void) sendPlayerActionWithDirection:(PlayerDirection) playerDirection withAcceleration:(PlayerAcceleration) playerAcceleration fire:(BOOL) fireWithNextActionFlag;
 - (void) close;
 

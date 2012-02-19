@@ -9,32 +9,31 @@
 #import "ScubyWarsViewController.h"
 
 
+@interface ScubyWarsViewController () {
+  PlayerDirection currentPlayerDirection;
+  PlayerAcceleration currentPlayerAcceleration;
+}
+
+@property (strong, nonatomic) ClientSocket* clientSocket;
+
+@end
+
+
 @implementation ScubyWarsViewController
 
 
-@synthesize playerIdLabel;
-@synthesize clientSocket;
-
-
-- (void) dealloc {
-  self.playerIdLabel = nil;
-  self.clientSocket = nil;
-
-  [playerIdLabel release];
-  [super dealloc];
-}
+@synthesize playerIdLabel = _playerIdLabel;
+@synthesize clientSocket = _clientSocket;
 
 
 - (void) viewDidLoad {
   [super viewDidLoad];
 
-  self.clientSocket = [[[ClientSocket alloc] init] autorelease];
+  self.clientSocket = [[ClientSocket alloc] init];
   currentPlayerDirection = PlayerDirectionStraight;
   currentPlayerAcceleration = PlayerAccelerationNone;
 
-  playerIdLabel.text = [NSString stringWithFormat:@"%qi", [clientSocket playerId]];
-
-  UIGestureRecognizer* gestureRecognizer = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touchAction)] autorelease];
+  UIGestureRecognizer* gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touchAction)];
   [self.view addGestureRecognizer:gestureRecognizer];
 
   [UIAccelerometer sharedAccelerometer].delegate = self;
@@ -44,29 +43,27 @@
 
 - (void) viewDidDisappear:(BOOL) animated {
   [UIAccelerometer sharedAccelerometer].delegate = nil;
-  [clientSocket close];
+  [self.clientSocket close];
 
   [super viewDidDisappear:animated];
 }
 
 
 - (void) touchAction {
-  [clientSocket sendPlayerActionWithDirection:currentPlayerDirection withAcceleration:currentPlayerAcceleration fire:YES];
+  [self.clientSocket sendPlayerActionWithDirection:currentPlayerDirection withAcceleration:currentPlayerAcceleration fire:YES];
 }
 
 
 - (void) accelerometer:(UIAccelerometer*) accelerometer didAccelerate:(UIAcceleration*) acceleration {
 //  NSLog(@"accel (x=%f,y=%f,z=%f)", acceleration.x, acceleration.y, acceleration.z);
 
-  PlayerDirection newPlayerDirection;
-  PlayerAcceleration newPlayerAcceleration;
+  PlayerDirection newPlayerDirection = PlayerDirectionStraight;
+  PlayerAcceleration newPlayerAcceleration = PlayerAccelerationNone;
 
   if (acceleration.y < -0.2)
     newPlayerDirection = PlayerDirectionLeft;
   else if (acceleration.y > 0.2)
     newPlayerDirection = PlayerDirectionRight;
-  else
-    newPlayerDirection = PlayerDirectionStraight;
 
   if (acceleration.z < -0.8)
     newPlayerAcceleration = PlayerAccelerationStraight;
@@ -77,7 +74,7 @@
     currentPlayerDirection = newPlayerDirection;
     currentPlayerAcceleration = newPlayerAcceleration;
 
-    [clientSocket sendPlayerActionWithDirection:currentPlayerDirection withAcceleration:currentPlayerAcceleration fire:NO];
+    [self.clientSocket sendPlayerActionWithDirection:currentPlayerDirection withAcceleration:currentPlayerAcceleration fire:NO];
   }
 }
 
@@ -89,9 +86,4 @@
 }
 
 
-- (void)viewDidUnload {
-  [playerIdLabel release];
-  playerIdLabel = nil;
-  [super viewDidUnload];
-}
 @end

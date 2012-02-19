@@ -11,13 +11,8 @@
 
 
 @interface ScubyWarsViewController : UIViewController <UIAccelerometerDelegate> {
-  IBOutlet UILabel* playerIdLabel;
-  ClientSocket* clientSocket;
-  PlayerDirection currentPlayerDirection;
-  PlayerAcceleration currentPlayerAcceleration;
 }
 
-@property (retain) UILabel* playerIdLabel;
-@property (retain) ClientSocket* clientSocket;
+@property (weak, nonatomic) IBOutlet UILabel* playerIdLabel;
 
 @end

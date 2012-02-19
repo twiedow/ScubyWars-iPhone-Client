@@ -8,14 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class ScubyWarsViewController;
-
-@interface ScubyWarsAppDelegate : NSObject <UIApplicationDelegate> {
-
+@interface ScubyWarsAppDelegate : UIResponder <UIApplicationDelegate> {
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-
-@property (nonatomic, retain) IBOutlet ScubyWarsViewController *viewController;
+@property (strong, nonatomic) UIWindow* window;
 
 @end
